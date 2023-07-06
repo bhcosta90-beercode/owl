@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('sellers', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('company_id')->on('companies');
             $table->foreignId('address_id')->on('address');
             $table->foreignId('user_id')->on('users');
             $table->timestamps();

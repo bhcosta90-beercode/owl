@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('seller_id')->on('users');
+            $table->foreignId('seller_id')->on('sellers');
             $table->foreignId('customer_id')->on('customers');
             $table->timestamp('sold_at');
             $table->char('status', 2);

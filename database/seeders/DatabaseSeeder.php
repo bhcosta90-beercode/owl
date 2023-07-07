@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             AddressSeed::class,
+            CompanySeed::class,
             UserSeed::class,
-            CompanySeed::class
         ]);
 
         DB::unprepared('REFRESH MATERIALIZED VIEW sales_commission_view');

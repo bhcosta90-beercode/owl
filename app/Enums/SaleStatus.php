@@ -3,7 +3,7 @@
 namespace App\Enums;
 
 enum SaleStatus: string {
-    case PENDING = 'A';
-    case APPROVED = 'B';
-    case CANCELLED = 'C';
+    case PENDING = 'PE';
+    case APPROVED = 'AP';
+    case CANCELLED = 'CA';
 }

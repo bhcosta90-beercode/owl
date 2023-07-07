@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -11,7 +12,8 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return 'oi';
+        $customers = Customer::with(['user', 'address'])->paginate();
+        return view('customer.index', compact('customers'));
     }
 
     /**

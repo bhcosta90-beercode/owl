@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('sales', function (Blueprint $table) {
             $table->id();
             $table->foreignId('seller_id')->on('sellers');
-            $table->foreignId('customer_id')->on('customers');
+            $table->foreignUuid('customer_id')->on('customers');
             $table->timestamp('sold_at');
             $table->char('status', 2);
             $table->unsignedDouble('total_amount');

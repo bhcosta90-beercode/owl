@@ -1,6 +1,13 @@
 <x-app-layout>
 
 <x-container>
+    <div class="mb-4 sm:flex-auto">
+        <p class="mt-2 text-sm text-gray-700">A list of all the clients.</p>
+        <a class="text-sm text-blue-600 underline rounded-md dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 dark:focus:ring-offset-gray-800" href="{{ route('customer.create') }}">
+            {{ __('Create client') }}
+        </a>
+    </div>
+    
     <div class="relative mb-2 overflow-x-auto shadow-md sm:rounded-lg">
         <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="bg-gray-50">
